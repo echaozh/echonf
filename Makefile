@@ -9,7 +9,7 @@ install-dbg: build/release/Makefile
 	make -C build/debug install
 
 clean:
-	rm -rf build install install-dbg
+	rm -rf build install-dbg
 
 build/debug/Makefile: | build/debug
 	cd build/debug; \
@@ -18,8 +18,7 @@ build/debug/Makefile: | build/debug
 
 build/release/Makefile: | build/release
 	cd build/release; \
-	  cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-	  -DCMAKE_INSTALL_PREFIX=$$PWD/../../install ../..
+	  cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ../..
 
 build/debug:
 	mkdir -p $@
