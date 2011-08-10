@@ -1,15 +1,21 @@
-all: build/debug/Makefile build/release/Makefile
+.PHONY: all install install-dbg clean
+
+all: debug release-build
+
+debug: build/debug/Makefile
 	make -C build/debug
+
+release-build: build/release/Makefile
 	make -C build/release
 
-install: build/release/Makefile
+install: release-build
 	make -C build/release install
 
-install-dbg: build/release/Makefile
+install-dbg: debug
 	make -C build/debug install
 
 clean:
-	rm -rf build install-dbg
+	rm -rf build install install-dbg
 
 build/debug/Makefile: | build/debug
 	cd build/debug; \
