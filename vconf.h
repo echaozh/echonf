@@ -1,6 +1,6 @@
 /*** vconf/vconf.h -- the vconf library
 
- ** Copyright (c) 2011 Vobile. All rights reserved.
+ ** Copyright (c) 2011 Zhang Yichao<echaozh@gmail.com>. All rights reserved.
  ** Author: Zhang Yichao <zhang_yichao@vobile.cn>
  ** Created: 2011-05-16
  **/
